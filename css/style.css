@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0A6EBD;
+    font-family: 'Belanosima', sans-serif;
+}
+
+.container {
+    width: 450px;
+    background-color: #5A96E3;
+    padding: 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    color: #f5f5f5;
+}
+
+.heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #A1C2F1;
+    padding-bottom: 5px;
+}
+
+.word {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 24px;
+    margin: 15px 0px;
+}
+
+.hint {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.wordInput {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px ;
+    margin: 15px 0px;
+    border: 2px solid #A1C2F1;
+    background-color: transparent;
+    outline-color: #A1C2F1;
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.wordInput::placeholder {
+    color: #f5f5f5;
+    font-size: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.refreshWord{
+    cursor: pointer;
+    width: 48%;
+    padding: 20px 0px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: #F24C3D;
+    color: white;
+}
+.checkWord{
+    cursor: pointer;
+    width: 48%;
+    padding: 20px 0px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: #0A6EBD;
+    color: white;
+}
