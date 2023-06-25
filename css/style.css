@@ -48,10 +48,14 @@ body {
     font-size: 18px;
 }
 
+.hint span {
+    margin-left: 10px;
+}
+
 .wordInput {
     box-sizing: border-box;
     width: 100%;
-    padding: 12px ;
+    padding: 12px;
     margin: 15px 0px;
     border: 2px solid #A1C2F1;
     background-color: transparent;
@@ -73,7 +77,8 @@ body {
     text-transform: capitalize;
     font-weight: 600;
 }
-.refreshWord{
+
+.refreshWord {
     cursor: pointer;
     width: 48%;
     padding: 20px 0px;
@@ -90,7 +95,8 @@ body {
     background-color: #F24C3D;
     color: white;
 }
-.checkWord{
+
+.checkWord {
     cursor: pointer;
     width: 48%;
     padding: 20px 0px;
