@@ -31,6 +31,10 @@ const checkWord = () => {
       setTimeout(() => {
         initialize();
       }, 1000);
+    } else {
+      infoElm.style.color = "#F24C3D";
+      infoElm.style.display = "block";
+      infoElm.innerText = "please try again";
     }
   } else {
     infoElm.style.color = "#F24C3D";
