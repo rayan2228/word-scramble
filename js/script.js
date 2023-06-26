@@ -2,6 +2,7 @@ const wordElm = document.querySelector(".word");
 const hintElm = document.querySelector(".hint").lastChild;
 const wordInputElm = document.querySelector(".wordInput");
 const infoElm = document.querySelector(".info");
+const timeElm = document.querySelector(".time").children[0];
 const refreshWordElm = document.querySelector(".refreshWord");
 const checkWordElm = document.querySelector(".checkWord");
 const shuffleWord = (pickedWord) => {
@@ -29,6 +30,7 @@ const checkWord = () => {
       infoElm.innerText = "correct answer.keep playing";
       wordInputElm.value = "";
       setTimeout(() => {
+        clearCount();
         initialize();
       }, 1000);
     }
@@ -41,13 +43,33 @@ const checkWord = () => {
 const inputValueCheck = () => {
   infoElm.style.display = "none";
 };
+
+const countDown = () => {
+  let count = 20;
+  counter = setInterval(() => {
+    count--;
+    timeElm.innerText = count;
+    if (count == 0) {
+      clearCount();
+      initialize();
+    }
+  }, 1000);
+};
 const initialize = () => {
   let randomNumber = Math.floor(Math.random() * words.length);
   let pickedWordAndHint = words[randomNumber];
+  wordInputElm.value = "";
   showInUi(pickedWordAndHint);
   inputValueCheck();
+  countDown();
 };
-refreshWordElm.addEventListener("click", initialize);
+const clearCount = () => {
+  clearInterval(counter);
+};
+refreshWordElm.addEventListener("click", () => {
+  clearCount();
+  initialize();
+});
 checkWordElm.addEventListener("click", checkWord);
 wordInputElm.addEventListener("keyup", inputValueCheck);
 initialize();

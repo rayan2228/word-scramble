@@ -121,3 +121,9 @@ body {
     margin-bottom: 15px;
     display: none;
 }
+.time {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
