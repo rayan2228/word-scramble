@@ -24,30 +24,34 @@ const checkWord = () => {
   let userWord = wordInputElm.value.toLowerCase();
   if (userWord) {
     if (userWord === correctWord) {
+      wordInputElm.style.borderColor = "#A2FF86";
       infoElm.style.color = "#A2FF86";
       infoElm.style.display = "block";
       infoElm.innerText = "correct answer.keep playing";
-      wordInputElm.value = "";
       setTimeout(() => {
         initialize();
       }, 1000);
     } else {
+      wordInputElm.style.borderColor = "#F24C3D";
       infoElm.style.color = "#F24C3D";
       infoElm.style.display = "block";
       infoElm.innerText = "please try again";
     }
   } else {
+    wordInputElm.style.borderColor = "#F24C3D";
     infoElm.style.color = "#F24C3D";
     infoElm.style.display = "block";
     infoElm.innerText = "please enter the correct word";
   }
 };
 const inputValueCheck = () => {
+  wordInputElm.style.borderColor = "#A1C2F1";
   infoElm.style.display = "none";
 };
 const initialize = () => {
   let randomNumber = Math.floor(Math.random() * words.length);
   let pickedWordAndHint = words[randomNumber];
+  wordInputElm.value = "";
   showInUi(pickedWordAndHint);
   inputValueCheck();
 };
